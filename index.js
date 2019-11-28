@@ -9,12 +9,12 @@ app.get('/bye*', (req, res) => {
     res.send({bye: 'buddy'});
 });
 
-app.get('/*', (req, res) => {
-    res.send({hi: 'here'});
-});
-
 app.get('/buddy', (req, res) => {
     res.send({not_your: 'buddy, guy'});
+});
+
+app.get('/*', (req, res) => {
+    res.send({hi: 'here'});
 });
 
 const PORT = process.env.PORT || 5000
